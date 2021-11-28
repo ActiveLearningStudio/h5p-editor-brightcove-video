@@ -745,3 +745,7 @@ body .h5p.shepherd-element.shepherd-theme-arrows {
 .form-manager-icon-brightcoveinteractivevideo:before {
   content: "\f01d";
 }
+
+.h5p-brightcoveinteractivevideo-editor .content .video,.field-name-textTracks {
+  display: none;
+}

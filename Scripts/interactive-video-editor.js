@@ -282,13 +282,12 @@ H5PEditor.widgets.interactiveVideo = H5PEditor.BrightcoveInteractiveVideo = (fun
       fontSize: ''
     });
 
-    if (this.video === undefined) {
+    if (this.parent.params.video.brightcoveVideoID === undefined) {
       this.$editor.html(this.noVideoSourceMessage(this.parent)).removeClass('h5p-interactive-video');
       return;
     }
 
     var that = this;
-
     // Create new player.
     this.IV = new H5P.BrightcoveInteractiveVideo({
       interactiveVideo: {
@@ -298,7 +297,8 @@ H5PEditor.widgets.interactiveVideo = H5PEditor.BrightcoveInteractiveVideo = (fun
             poster: this.poster
           }
         },
-        assets: this.params
+        assets: this.params,
+        brightcoveVideoID: this.parent.params.video.brightcoveVideoID
       }
     }, H5PEditor.contentId);
 
