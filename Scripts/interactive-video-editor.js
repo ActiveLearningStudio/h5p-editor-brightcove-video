@@ -799,8 +799,19 @@ H5PEditor.widgets.interactiveVideo = H5PEditor.BrightcoveInteractiveVideo = (fun
     if (type !== 'H5P.Text' && type !== 'H5P.Image') {
       hideFields(interactionFields, ['goto']);
     }
-    if (['H5P.Text', 'H5P.Image', 'H5P.Link', 'H5P.Table'].indexOf(type) === -1) {
-      hideFields(interactionFields, ['visuals']);
+    if (type == "H5P.Text" || type == "H5P.Image" || type == "H5P.Link") {
+      // UI update code.
+      var visualsFields = findField("visuals", interactionFields);
+      hideFields(visualsFields.fields, ["Submitbgcolor"]);
+      hideFields(visualsFields.fields, ["Submittextcolor"]);
+    }
+    if (
+      // ["H5P.Text", "H5P.Image", "H5P.Link", "H5P.Table"].indexOf(type) === -1
+      type == "H5P.IVHotspot" ||
+      type == "H5P.Questionnaire"
+    ) {
+      // UI update code.
+      hideFields(interactionFields, ["visuals"]);
     }
     if (type === 'H5P.Summary') {
       var adaptivityFields = findField('adaptivity', interactionFields);
@@ -921,11 +932,34 @@ H5PEditor.widgets.interactiveVideo = H5PEditor.BrightcoveInteractiveVideo = (fun
     }
 
     if (interactionFields.visuals.$group) {
-      $('.h5p-image-radio-button-group input:radio', interaction.$form).change(function () {
-        interactionFields.visuals.$group.toggleClass('hide', $(this).val() !== 'poster');
-      });
+      // The bellow commented code will remove the visual tab from the button.
+      // $('.h5p-image-radio-button-group input:radio', interaction.$form).change(function () {
+      //   interactionFields.visuals.$group.toggleClass('hide', $(this).val() !== 'poster');
+      // });
 
-      interactionFields.visuals.$group.toggleClass('hide', parameters.displayType !== 'poster');
+      // UI update code.
+      $(".h5p-image-radio-button-group input:radio", interaction.$form).change(
+        function () {
+          var button = $(this).val();
+
+          if (button == "poster") {
+            interactionFields.visuals.$group
+              .children("div.content")
+              .children("div.field-name-iconbackgroundColor")
+              .addClass("hide");
+          }
+          if (button == "button") {
+            interactionFields.visuals.$group
+              .children("div.content")
+              .children("div.field-name-iconbackgroundColor")
+              .removeClass("hide");
+          }
+        }
+      );
+      interactionFields.visuals.$group
+        .children("div.content")
+        .children("div.field-name-iconbackgroundColor")
+        .addClass("hide", parameters.displayType !== "poster");
     }
 
     // Create require completion instances for content types with scores.
