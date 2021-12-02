@@ -959,7 +959,7 @@ H5PEditor.widgets.interactiveVideo = H5PEditor.BrightcoveInteractiveVideo = (fun
       interactionFields.visuals.$group
         .children("div.content")
         .children("div.field-name-iconbackgroundColor")
-        .addClass("hide", parameters.displayType !== "poster");
+        .toggleClass("hide", parameters.displayType == "poster");
     }
 
     // Create require completion instances for content types with scores.
