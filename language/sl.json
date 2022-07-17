@@ -5,7 +5,6 @@
     "notVideoField": "\":path\" ni videoposnetek.",
     "notImageField": "\":path\" ni slika.",
     "insertElement": "S klikom postavi aktivnost :type",
-    "popupTitle": "Uredi :type",
     "done": "Potrdi",
     "loading": "Nalagam ...",
     "remove": "Izbriši",
@@ -45,6 +44,10 @@
     "tooltipBookmarks": "S klikom se na izbranem mestu videoposnetka doda zaznamek",
     "tooltipEndscreens": "S klikom se na izbranem mestu videoposnetka doda zaslon za potrditev odgovorov",
     "expandBreadcrumbButtonLabel": "Pojdi nazaj",
-    "collapseBreadcrumbButtonLabel": "Zapri navigacijo"
+    "collapseBreadcrumbButtonLabel": "Zapri navigacijo",
+    "deleteInteractionTitle": "Deleting interaction",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "ok": "Ok"
   }
 }

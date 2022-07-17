@@ -5,7 +5,6 @@
     "notVideoField": "\":path\" אינו וידאו.",
     "notImageField": "\":path\" זו לא תמונה.",
     "insertElement": "יש להקליק ולגרור למקום :type",
-    "popupTitle": "עריכת :type",
     "done": "הסתיים",
     "loading": "טוען...",
     "remove": "הסרה",
@@ -45,6 +44,10 @@
     "tooltipBookmarks": "הקליקו להוספת סימניה בנקודת הזמן הנוכחית של הסרטון",
     "tooltipEndscreens": "הקליקו להוספת מסך הגשה בנקודת הזמן הנוכחית של הסרטון",
     "expandBreadcrumbButtonLabel": "חזרה לאחור",
-    "collapseBreadcrumbButtonLabel": "סגירת ניווט"
+    "collapseBreadcrumbButtonLabel": "סגירת ניווט",
+    "deleteInteractionTitle": "Deleting interaction",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "ok": "Ok"
   }
 }
