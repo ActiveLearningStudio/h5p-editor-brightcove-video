@@ -5,7 +5,6 @@
     "notVideoField":"\":path\" er ikke en video.",
     "notImageField":"\":path\" er ikke et billede",
     "insertElement":"Klik og træk for at placere :type",
-    "popupTitle":"Ændre :type",
     "done":"Færdig",
     "loading":"Indlæser.",
     "remove":"Fjern",
@@ -45,6 +44,10 @@
     "tooltipBookmarks":"Click to add bookmark at the current point in the video",
     "tooltipEndscreens":"Click to add submit screen at the current point in the video",
     "expandBreadcrumbButtonLabel": "Go back",
-    "collapseBreadcrumbButtonLabel": "Close navigation"
+    "collapseBreadcrumbButtonLabel": "Close navigation",
+    "deleteInteractionTitle": "Deleting interaction",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "ok": "Ok"
   }
 }

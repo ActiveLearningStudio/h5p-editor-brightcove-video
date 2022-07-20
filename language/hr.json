@@ -5,7 +5,6 @@
   "notVideoField": "\":path\"  nije video.",
   "notImageField": "\":path\" nije slika.",
   "insertElement": "Kliknite i povucite na mjesto :type",
-  "popupTitle": "Uredi :type",
   "done": "Gotovo",
   "loading": "Učitavanje...",
   "remove": "Ukloni",
@@ -45,6 +44,10 @@
   "tooltipBookmarks": "Kliknite da biste dodali oznaku u trenutnoj točki videozapisa",
   "tooltipEndscreens": "Kliknite za dodavanje zaslona za slanje u trenutnoj točki videozapisa",
   "expandBreadcrumbButtonLabel": "Idi natrag",
-  "collapseBreadcrumbButtonLabel": "Zatvori navigaciju"
+  "collapseBreadcrumbButtonLabel": "Zatvori navigaciju",
+  "deleteInteractionTitle": "Deleting interaction",
+  "cancel": "Cancel",
+  "confirm": "Confirm",
+  "ok": "Ok"
  }
 }

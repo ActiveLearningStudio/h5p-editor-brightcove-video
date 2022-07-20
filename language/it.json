@@ -5,7 +5,6 @@
     "notVideoField": "\":path\" non è un video",
     "notImageField": "\":path\" non è un'immagine",
     "insertElement": "Clicca e trascina per posizionare :type",
-    "popupTitle": "Modifica :type",
     "done": "Fatto",
     "loading": "Caricamento in corso...",
     "remove": "Elimina",
@@ -45,6 +44,10 @@
     "tooltipBookmarks": "Clicca per aggiungere un segnalibro in questo punto del video",
     "tooltipEndscreens": "Clicca per aggiungere una schermata di invio in questo punto del video",
     "expandBreadcrumbButtonLabel": "Torna indietro",
-    "collapseBreadcrumbButtonLabel": "Chiudi navigazione"
+    "collapseBreadcrumbButtonLabel": "Chiudi navigazione",
+    "deleteInteractionTitle": "Deleting interaction",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "ok": "Ok"
   }
 }
