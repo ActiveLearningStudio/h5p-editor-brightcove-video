@@ -313,7 +313,7 @@ H5PEditor.widgets.interactiveVideo = H5PEditor.BrightcoveInteractiveVideo = (fun
           }
         },
         assets: this.params,
-        brightcoveVideoID: this.parent.params.video.brightcoveVideoID
+        brightcoveVideoID: this.parent.params.video.brightcoveVideoID,
       }
     }, H5PEditor.contentId);
 
@@ -1831,13 +1831,29 @@ H5PEditor.widgets.interactiveVideo = H5PEditor.BrightcoveInteractiveVideo = (fun
     const data = {
       callback: (callBackdata) => {
         console.log(callBackdata);
-        this.parent.params.video.brightcoveVideoID = callBackdata.brightcoveVideoID
+        this.parent.params.video.brightcoveVideoID = callBackdata.brightcoveVideoID;
+        if (callBackdata.startVideoAt) {
+          const startVideoAt = formatTime(callBackdata.startVideoAt);
+          $(this.parent.parent.$myField[0]).find('.field-name-startVideoAt>input').val(startVideoAt).change();
+        }
+        if (callBackdata.endVideoAt) {
+          const endVideoAt = formatTime(callBackdata.endVideoAt);
+          $(this.parent.parent.$myField[0]).find('.field-name-endVideoAt>input').val(endVideoAt).change();
+        }
         this.setActive();
-      }
+      },
+      supportStartEndTime: true
     };
     const event = new CustomEvent('launchBrightcoveBrowseVideosDialog', { detail: data } );
     window.parent.dispatchEvent(event);
     return false;
+  }
+
+  var formatTime = function formatTime(seconds) {
+    const minutes = Math.floor(seconds / 60);
+    const remainingSeconds = seconds % 60;
+
+    return `${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
   }
 
   return InteractiveVideoEditor;
